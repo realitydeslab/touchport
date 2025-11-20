@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/NGOSampleFlowScene.unity
     guid: e5e771c136cbdbf4da6979b3ca3a997d
+  - enabled: 1
+    path: Assets/TouchPort/Scenes/Splat.unity
+    guid: 472340c0808c046a3ba3beaa881c68a3
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: aa13d869540b44f0da5d3263802649e5, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 708c66a48efb240f382b4f24ea06b1bd, type: 2}

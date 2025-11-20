@@ -1,4 +1,9 @@
 ﻿<Solution>
+  <Project Path="Fusion.Unity.Editor.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Gsplat.csproj" />
+  <Project Path="Fusion.Unity.csproj" />
   <Project Path="Gsplat.Editor.csproj" />
+  <Project Path="Unity.Fusion.CodeGen.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
 </Solution>
