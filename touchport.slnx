@@ -1,0 +1,4 @@
+﻿<Solution>
+  <Project Path="Gsplat.csproj" />
+  <Project Path="Gsplat.Editor.csproj" />
+</Solution>

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Scenes/NGOSampleFlowScene.unity
+    guid: e5e771c136cbdbf4da6979b3ca3a997d
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: aa13d869540b44f0da5d3263802649e5, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 708c66a48efb240f382b4f24ea06b1bd, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 019e0c542ef52412b8c7bbfaaaedadec, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 234cb6df567f0400cb5d0c30c94d5f83, type: 2}
+  m_UseUCBPForAssetBundles: 0
