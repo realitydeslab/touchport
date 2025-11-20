@@ -363,7 +363,7 @@ Transform:
   m_GameObject: {fileID: 140587690}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: -0.06, y: -0.21, z: 1.16}
   m_LocalScale: {x: 1, y: 0.02, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -757,6 +757,63 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1001 &270878586
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1328995008527075271, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_Name
+      value: '[MR Motifs] Colocation Manager'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950835091866386242, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.59132
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950835091866386242, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.22154
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950835091866386242, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.33508
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950835091866386242, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950835091866386242, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950835091866386242, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950835091866386242, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950835091866386242, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950835091866386242, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5950835091866386242, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 179defd1527aac645b0349706ebaeebc, type: 3}
 --- !u!1 &334496948
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,6 +1166,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1286330258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &607733273
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4752380042313195190, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_Name
+      value: '[MR Motifs] SSA Manager'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859835874536822899, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.59132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859835874536822899, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.22154
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859835874536822899, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.33508
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859835874536822899, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859835874536822899, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859835874536822899, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859835874536822899, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859835874536822899, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859835874536822899, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6859835874536822899, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7121571860471547849, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
+      propertyPath: SortKey
+      value: 1876579790
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fd33cb64341aded4ab6ed78f956740bf, type: 3}
 --- !u!1 &693464039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,9 +1275,9 @@ MonoBehaviour:
   SHDegree: 3
   GammaToLinear: 1
   SplatSizeScale: 0.915
-  MovementSpeed: 0.592
-  MovementScale: 0.054
-  HDRIntensityScale: 1.03
+  MovementSpeed: 0.521
+  MovementScale: 0.0861
+  HDRIntensityScale: 1
 --- !u!1 &706805226
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,10 +2793,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   namePrefix:
-  - Happy
-  - Running
-  - Laughing
-  - Smiling
+  - Dream1
+  - Dream2
+  - Dream3
+  - Dream4
   namePostfix:
   - Cat
   - Dog
@@ -3193,6 +3311,8 @@ SceneRoots:
   - {fileID: 1842408660}
   - {fileID: 938209388}
   - {fileID: 1760829944}
+  - {fileID: 270878586}
+  - {fileID: 607733273}
   - {fileID: 693464041}
   - {fileID: 2047693933}
   - {fileID: 967639453}

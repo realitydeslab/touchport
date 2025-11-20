@@ -55,6 +55,26 @@ MonoBehaviour:
       restoreCamera: 1
       offset: {x: 0, y: 0, z: 0, w: 0}
       cameraFieldOfView: 60
+--- !u!114 &-2906146200566815462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b00045f12942b46c698459096c89274e, type: 3}
+  m_Name: FullScreenPassRendererFeature
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.FullScreenPassRendererFeature
+  m_Active: 1
+  injectionPoint: 450
+  fetchColorBuffer: 1
+  requirements: 0
+  passMaterial: {fileID: 2100000, guid: e5a42e30332af4292bf618293d75e2e1, type: 2}
+  passIndex: 0
+  bindDepthStencilAttachment: 0
+  m_Version: 1
 --- !u!114 &-2497089007460536576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,10 +143,11 @@ MonoBehaviour:
     probeVolumeBlendStatesCS: {fileID: 0}
   m_RendererFeatures:
   - {fileID: 6975089893749976785}
+  - {fileID: -2906146200566815462}
   - {fileID: -2497089007460536576}
   - {fileID: 8598882359915885334}
   - {fileID: -7673190994530323509}
-  m_RendererFeatureMap: d16e62814d7fcc60002fc821c78e58dd16b32890f25d5577cb334bdd71598395
+  m_RendererFeatureMap: d16e62814d7fcc601a25dd916d4babd7002fc821c78e58dd16b32890f25d5577cb334bdd71598395
   m_UseNativeRenderPass: 0
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}

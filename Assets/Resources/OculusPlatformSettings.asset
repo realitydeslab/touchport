@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: OculusPlatformSettings
   m_EditorClassIdentifier: 
   ovrAppID: 
-  ovrMobileAppID: org.realitydeslab.touchport
+  ovrMobileAppID: 32225313320446252
   ovrUseMobileAppIDInEditor: 0
   ovrUseStandalonePlatform: 0
