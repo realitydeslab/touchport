@@ -10,6 +10,7 @@ Shader "Gsplat/Standard"
         {
             "RenderType"="Transparent"
             "Queue"="Transparent"
+            "RenderPipeline" = "UniversalPipeline" 
         }
 
         Pass
@@ -25,13 +26,15 @@ Shader "Gsplat/Standard"
             #pragma multi_compile SH_BANDS_0 SH_BANDS_1 SH_BANDS_2 SH_BANDS_3
             
 
-            #include "UnityCG.cginc"
+            //#include "UnityCG.cginc"
+
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Color.hlsl"
             #include "Gsplat.hlsl"
-            
             #include "Packages/jp.keijiro.noiseshader/Shader/ClassicNoise3D.hlsl"
 
-            // #include "Packages/com.meta.xr.sdk.core/Shaders/EnvironmentDepth/URP/EnvironmentOcclusionURP.hlsl"
-            // #pragma multi_compile _ HARD_OCCLUSION SOFT_OCCLUSION
+            #include "Packages/com.meta.xr.sdk.core/Shaders/EnvironmentDepth/URP/EnvironmentOcclusionURP.hlsl"
+            #pragma multi_compile _ HARD_OCCLUSION SOFT_OCCLUSION
 
             float _MovementSpeed;
             float _MovementScale;
@@ -42,6 +45,8 @@ Shader "Gsplat/Standard"
             int _SplatCount;
             int _SplatInstanceSize;
             int _SHDegree;
+            float _clipXY;
+
             float4x4 _MATRIX_M;
             StructuredBuffer<uint> _OrderBuffer;
             StructuredBuffer<float3> _PositionBuffer;
@@ -82,12 +87,24 @@ Shader "Gsplat/Standard"
             {
                 float4x4 modelView = mul(UNITY_MATRIX_V, _MATRIX_M);
                 float4 centerView = mul(modelView, float4(modelCenter, 1.0));
+                // Discard splats behind the camera
                 if (centerView.z > 0.0)
                 {
                     return false;
                 }
                 float4 centerProj = mul(UNITY_MATRIX_P, centerView);
+
+                if (abs(centerProj.z) >= centerProj.w) {
+                    return false;
+                }
+
                 centerProj.z = clamp(centerProj.z, -abs(centerProj.w), abs(centerProj.w));
+
+                float clip = _clipXY * centerProj.w;
+                if (abs(centerProj.x) > clip || abs(centerProj.y) > clip) {
+                    return false;
+                }
+            
                 center.view = centerView.xyz / centerView.w;
                 center.proj = centerProj;
                 center.projMat00 = UNITY_MATRIX_P[0][0];
@@ -116,14 +133,13 @@ Shader "Gsplat/Standard"
             {
                 v2f o;
                 UNITY_SETUP_INSTANCE_ID(v);
-                UNITY_INITIALIZE_OUTPUT(v2f, o);
+                ZERO_INITIALIZE(v2f, o);
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
                 SplatSource source;
                 if (!InitSource(v, source))
                 {
                     o.vertex = discardVec;
-                    //META_DEPTH_INITIALIZE_VERTEX_OUTPUT(o, v.vertex);
                     return o;
                 }
 
@@ -132,7 +148,6 @@ Shader "Gsplat/Standard"
                 if (!InitCenter(modelCenter, center))
                 {
                     o.vertex = discardVec;
-                    //META_DEPTH_INITIALIZE_VERTEX_OUTPUT(o, v.vertex);
                     return o;
                 }
 
@@ -142,7 +157,6 @@ Shader "Gsplat/Standard"
                 if (!InitCorner(source, cov, center, corner))
                 {
                     o.vertex = discardVec;
-                    //META_DEPTH_INITIALIZE_VERTEX_OUTPUT(o, v.vertex);
                     return o;
                 }
 
@@ -179,8 +193,8 @@ Shader "Gsplat/Standard"
 
                 float4 c = float4(i.color.rgb * alpha * _HDRIntensityScale, alpha);
                 if (_GammaToLinear)
-                    c = float4(GammaToLinearSpace(i.color.rgb) * alpha * _HDRIntensityScale, alpha);
-                //META_DEPTH_OCCLUDE_OUTPUT_PREMULTIPLY(i, c, 0.0);
+                    c = float4(SRGBToLinear(i.color.rgb) * alpha * _HDRIntensityScale, alpha);
+                META_DEPTH_OCCLUDE_OUTPUT_PREMULTIPLY(i, c, 0.0);
                 return c;
             }
             ENDHLSL

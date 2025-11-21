@@ -1274,7 +1274,8 @@ MonoBehaviour:
   GsplatAsset: {fileID: 4599839170941234424, guid: 02afa7b5a00a7490f9b43187a0e11bf8, type: 3}
   SHDegree: 3
   GammaToLinear: 1
-  SplatSizeScale: 0.915
+  SplatSizeScale: 0.902
+  ClipXY: 1
   MovementSpeed: 0.521
   MovementScale: 0.0861
   HDRIntensityScale: 1
@@ -1788,7 +1789,8 @@ MonoBehaviour:
   GsplatAsset: {fileID: 4599839170941234424, guid: d1d5613494aa64feaa2b5890998bb64c, type: 3}
   SHDegree: 3
   GammaToLinear: 1
-  SplatSizeScale: 1
+  SplatSizeScale: 0.519
+  ClipXY: 1
   MovementSpeed: 0.5
   MovementScale: 0.02
   HDRIntensityScale: 1
@@ -3277,6 +3279,7 @@ MonoBehaviour:
   SHDegree: 3
   GammaToLinear: 1
   SplatSizeScale: 1
+  ClipXY: 1
   MovementSpeed: 0.5
   MovementScale: 0.02
   HDRIntensityScale: 1

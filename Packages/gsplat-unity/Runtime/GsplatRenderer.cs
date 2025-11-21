@@ -14,6 +14,7 @@ namespace Gsplat
         public bool GammaToLinear;
 
         [Range(0.0f, 2.0f)] public float SplatSizeScale = 1.0f;
+        [Range(0.0f, 2.0f)] public float ClipXY = 1.4f;
 
         [Range(0.0f, 1.0f)] public float MovementSpeed = 0.5f;
         [Range(0.0f, 0.1f)] public float MovementScale = 0.02f;
@@ -69,7 +70,7 @@ namespace Gsplat
 
             if (Valid)
                 m_renderer.Render(GsplatAsset.SplatCount, transform, GsplatAsset.Bounds, gameObject.layer,
-                    GammaToLinear, SHDegree, SplatSizeScale, MovementSpeed, MovementScale, HDRIntensityScale);
+                    GammaToLinear, SHDegree, ClipXY, SplatSizeScale, MovementSpeed, MovementScale, HDRIntensityScale);
         }
     }
 }

@@ -42,6 +42,7 @@ namespace Gsplat
         static readonly int k_movementScale = Shader.PropertyToID("_MovementScale");
         static readonly int k_hdrIntensityScale = Shader.PropertyToID("_HDRIntensityScale");
 
+        static readonly int k_clipXY = Shader.PropertyToID("_clipXY");
 
         public GsplatRendererImpl(uint splatCount, byte shBands)
         {
@@ -121,7 +122,7 @@ namespace Gsplat
         /// <param name="gammaToLinear">Covert color space from Gamma to Linear.</param>
         /// <param name="shDegree">Order of SH coefficients used for rendering. The final value is capped by the SHBands property.</param>
         public void Render(uint splatCount, Transform transform, Bounds localBounds, int layer,
-            bool gammaToLinear = false, int shDegree = 3, float splatSizeScale = 1.0f, 
+            bool gammaToLinear = false, int shDegree = 3, float clipXY = 1.4f, float splatSizeScale = 1.0f, 
             float movementSpeed = 0.5f, float movementScale = 0.02f, float hdrIntensityScale = 1.0f)
         {
             if (!Valid || !GsplatSettings.Instance.Valid || !GsplatSorter.Instance.Valid)
@@ -131,6 +132,7 @@ namespace Gsplat
             m_propertyBlock.SetInteger(k_gammaToLinear, gammaToLinear ? 1 : 0);
             m_propertyBlock.SetInteger(k_splatInstanceSize, (int)GsplatSettings.Instance.SplatInstanceSize);
             m_propertyBlock.SetInteger(k_shDegree, shDegree);
+            m_propertyBlock.SetFloat(k_clipXY, clipXY);
             m_propertyBlock.SetFloat(k_splatSizeScale, splatSizeScale);
             m_propertyBlock.SetMatrix(k_matrixM, transform.localToWorldMatrix);
             m_propertyBlock.SetFloat(k_movementSpeed, movementSpeed);
