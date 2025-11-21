@@ -155,6 +155,8 @@ namespace Gsplat
                     InputValues = res.OrderBuffer,
                     Resources = res.Resources
                 };
+            
+                continue;
                 m_sortPass.Dispatch(cmd, sorterArgs);
             }
         }

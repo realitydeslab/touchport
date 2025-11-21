@@ -1166,6 +1166,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1286330258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &596397733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 596397735}
+  - component: {fileID: 596397734}
+  m_Layer: 0
+  m_Name: Splat (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &596397734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596397733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce0eaa90dbf24670a230447dc3ec09f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Gsplat::Gsplat.GsplatRenderer
+  GsplatAsset: {fileID: 4599839170941234424, guid: 02afa7b5a00a7490f9b43187a0e11bf8, type: 3}
+  SHDegree: 3
+  GammaToLinear: 1
+  SplatSizeScale: 0.902
+  ClipXY: 1
+  MovementSpeed: 0.521
+  MovementScale: 0.0861
+  HDRIntensityScale: 1
+--- !u!4 &596397735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596397733}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: -1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &607733273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3317,6 +3369,7 @@ SceneRoots:
   - {fileID: 270878586}
   - {fileID: 607733273}
   - {fileID: 693464041}
+  - {fileID: 596397735}
   - {fileID: 2047693933}
   - {fileID: 967639453}
   - {fileID: 1502872338}
