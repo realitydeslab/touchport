@@ -126,6 +126,8 @@ Shader "Gsplat/Standard"
                 float4 vertex : SV_POSITION;
                 float4 color: COLOR;
 
+                META_DEPTH_VERTEX_OUTPUT(1)
+
                 UNITY_VERTEX_OUTPUT_STEREO
             };
 
@@ -178,7 +180,7 @@ Shader "Gsplat/Standard"
                 o.color = float4(max(color.rgb, float3(0, 0, 0)), color.a);
                 o.uv = corner.uv;
 
-                //META_DEPTH_INITIALIZE_VERTEX_OUTPUT(o, v.vertex);
+                META_DEPTH_INITIALIZE_VERTEX_OUTPUT(o, v.vertex);
                 return o;
             }
 

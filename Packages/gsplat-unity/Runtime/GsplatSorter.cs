@@ -156,7 +156,6 @@ namespace Gsplat
                     Resources = res.Resources
                 };
             
-                continue;
                 m_sortPass.Dispatch(cmd, sorterArgs);
             }
         }

@@ -61,7 +61,7 @@ namespace Gsplat
                 if (GsplatAsset)
                 {
                     if (m_renderer == null)
-                        m_renderer = new GsplatRendererImpl(GsplatAsset.SplatCount, GsplatAsset.SHBands);
+                        m_renderer = new GsplatRendererImpl(GsplatAsset.SplatCount , GsplatAsset.SHBands);
                     else
                         m_renderer.RecreateResources(GsplatAsset.SplatCount, GsplatAsset.SHBands);
                     SetBufferData();
